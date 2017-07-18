@@ -40,6 +40,5 @@ window.addEventListener("popstate", function() {
 ```
 
 参考文章：
-
 [ajax与HTML5 history pushState/replaceState实例](http://www.zhangxinxu.com/wordpress/2013/06/html5-history-api-pushstate-replacestate-ajax/)\
 [URL的井号](http://www.ruanyifeng.com/blog/2011/03/url_hash.html)
