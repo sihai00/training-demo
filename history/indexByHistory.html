@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>history-demo</title>
+  <style>
+    body{
+      background-color: #323232;
+    }
+    .clear:after{
+      display: table;
+      clear: both;
+      content: ''
+    }
+    .container{
+      border-left: 200px solid #aaa;
+      background-color: #ccc;
+    }
+    .list{
+      box-sizing: border-box;
+      padding: 4px;
+      background-color: #aaa;
+      width: 200px;
+      float: left;
+      margin-left: -200px;
+    }
+    .item{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 40px;
+      border-bottom: 1px solid #bbb;
+      cursor: pointer;
+    }
+    .content{
+      padding: 6px;
+      border: 1px solid transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="container clear">
+    <div class="list"></div>
+    <div class="content"></div>
+  </div>
+</body>
+<script src="common.js"></script>
+<script>
+var list = document.querySelector('.list');
+var content = document.querySelector('.content');
+var hashContent = {};
+
+// 获取左侧问答列表数据
+window.onload = function(){
+  myajax('GET', 'https://cnodejs.org/api/v1/topics',{
+    limit:10,
+    tab: 'ask'
+  },function(response){
+    for (var i = 0; i < response.data.length; i++) {
+      var item = document.createElement('div');
+      item.classList.add('item');
+      item.textContent = `${i+1} -- ${response.data[i].title}`;
+      item.dataset.id = response.data[i].id;
+      list.appendChild(item);
+    }
+    // 绑定点击事件，获取对应左侧问答的内容
+    list.addEventListener('click', function(e){
+      if (e.target.className = 'item') {
+        var id = e.target.dataset.id;
+        myajax('GET', 'https://cnodejs.org/api/v1/topic/' + id, {}, function(response){
+          content.innerHTML = response.data.content;
+
+          // 以id为唯一标识存储该内容
+          // window.location.hash = id;
+          // hashContent[id] = response.data.content;
+          history.pushState(response.data.content, 'history-demo', window.location.pathname+'#'+id)
+        })
+      }
+    })
+
+    // 触发click事件，初始化
+    trigger('click', document.querySelector('.item'))  
+
+    // 当前进或后退时，还原内容
+
+    // window.onhashchange = function(e){
+    //   if (window.location.hash) {
+    //     content.innerHTML = hashContent[window.location.hash.substring(1)]
+    //   }
+    // }
+    window.addEventListener("popstate", function() {
+      content.innerHTML = history.state
+    });
+  })
+}
+
+</script>
+</html>

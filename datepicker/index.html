@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>datapicker</title>
+  <style>
+    body{
+      background-color: #323232;
+    }
+    .datepicker-wrap{
+      font-size: 16px;
+      min-width: 240px;
+      max-width: 600px;
+      color: #666;
+      box-shadow: 2px 2px 8px 2px rgba(255,255,255, 0.3);
+      background-color: #fff;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    .header{
+      border-radius: 5px;
+      padding: 0 20px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #ccc;
+      font-weight: bold;
+    }
+    a{
+      text-decoration: none;
+    }
+    .header-btn-left, .header-btn-right{
+      font-size: 20px;
+      color: #1abc9c;
+      cursor: pointer;
+    }
+    .header-btn-left{
+      float: left;
+    }
+    .header-btn-right{
+      float: right;
+    }
+    .content table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th{
+      line-height: 40px;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+    }
+    td{
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #f0f0f0;
+      cursor: pointer;
+    }
+    .cddd{
+      color: #ddd;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="datepicker-wrap"></div>
+</body>
+<script src="./datepicker.js"></script>
+<script>
+// 参数默认年月
+var datapicker = new datapicker(2017, 4);
+</script>
+</html>
