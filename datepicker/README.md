@@ -1,6 +1,6 @@
 # datepicker-plugin
 简单纯js封装的datepicker插件
-[效果地址](https://sihai00.github.io/datepicker-plugin/)
+[效果地址](https://sihai00.github.io/training-demo/datepicker/)
 
 ## 插件调用
 首先引入datepicker.js，然后命名class名为datepicker-wrap的标签
