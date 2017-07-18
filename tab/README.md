@@ -1,5 +1,5 @@
 # tab-demo
-三种方法实现tab [效果地址](https://sihai00.github.io/tab-plugin/)
+三种方法实现tab [效果地址](https://sihai00.github.io/training-demo/tab/)
 
 ## 纯css3实现自动播放轮播图(鼠标入暂停)
 一个html标签即可
