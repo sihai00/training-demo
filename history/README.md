@@ -1,7 +1,9 @@
 # history-demo
 两种方法实现ajax无法前进后退问题
+[hash 效果地址](https://sihai00.github.io/training-demo/history/indexByHash.html)
+[history 效果地址](https://sihai00.github.io/training-demo/history/indexByHistory.html)
 
-## hash [效果](https://sihai00.github.io/training-demo/history/indexByHash.html)
+## hash 
 通过改变hash值浏览器不刷新的特性来实现
 ```javascript
 <!-- 通过一个对象保存请求来的数据 -->
@@ -19,7 +21,7 @@ window.onhashchange = function(e){
 }
 ```
 
-## history [效果](https://sihai00.github.io/training-demo/history/indexByHistory.html)
+## history 
 > HTML5引进了history.pushState()方法和history.replaceState()方法，它们允许你逐条地添加和修改历史记录条目 -- MDN
 
 它有三个方法：

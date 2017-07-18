@@ -6,4 +6,4 @@ This repo is the demo about all technology in Front end
 |:---:|:---:|:---:|:---:|:---:|
 | 1 | tab | 三种方法实现tab | js、css、html | [链接](./tab/) |
 | 2 | history | 两种方法实现ajax无法前进后退问题 | js、css、html5 history | [链接](./history/) |
-| 3 | tab | 简单纯js封装的datepicker插件 | js、css、html | [链接](./datepicker/) |
+| 3 | datepicker | 简单纯js封装的datepicker插件 | js、css、html | [链接](./datepicker/) |
