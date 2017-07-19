@@ -3,19 +3,21 @@
 [效果地址](https://sihai00.github.io/training-demo/download/)
 
 ## 功能列表与技术点
-1.图片上传与下载（可选择是否加水印）
-2.文本下载，可自命名（.txt、.html都支持）
-3.表格下载，导出可用Excel打开
+功能列表
+1. 图片上传与下载（可选择是否加水印）
+2. 文本下载，可自命名（.txt、.html都支持）
+3. 表格下载，导出可用Excel打开
 
-1.实现预览效果有两种生成base64的方法为FileReader和canvas
-- FileReader可接收file对象，调用readAsDataURL即可生成base64
-- canvas需接受图片的dom，调用toDataURL('image/png')生成base64
-2.下载是运用h5新属性download实现，不考虑兼容性`<a href="address" download="name.txt" ／>`
+技术点
+1. 实现预览效果有两种生成base64的方法为FileReader和canvas
+  - FileReader可接收file对象，调用readAsDataURL即可生成base64
+  - canvas需接受图片的dom，调用toDataURL('image/png')生成base64
+2. 下载是运用h5新属性download实现`<a href="address" download="name.txt" ／>`，不考虑兼容性
 
 ## 图片上传与下载
 为了使两者都结合起来实现Demo，添加了水印功能。
 
-### 上传
+### 一：上传
 那么首先获取input的file对象，监听input的change函数即可
 ```javascript
 file.addEventListener('change', function(){
@@ -76,7 +78,7 @@ function canvasToBase64(img, fn){
   fn(canvas.toDataURL('image/png'))
 }
 ```
-## 文本下载
+## 二：文本下载
 原理跟图片是一样的，唯一区别是下载地址使用blob的createObjectURL生成
 ```javascript
 txtDownload.addEventListener('click', function(){
@@ -96,7 +98,7 @@ txtDownload.addEventListener('click', function(){
 })
 ```
 
-## 表格下载
+## 三：表格下载
 csv逗号分隔值文件格式，用逗号表示一个单元格，换行符表示一行，可用excel打开，但有两个问题。
 1.处理换行：encodeURIComponent
 2.添加`\ufeff`BOM头
