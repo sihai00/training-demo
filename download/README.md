@@ -1,5 +1,5 @@
-# datepicker-plugin
-资源下载(图片、文件等)，图片(input)->base64(预览)->bolb(二进制)->download(下载)运用
+# download
+资源下载(图片、文件等)，图片(input)->base64(预览)->bolb(二进制)->download(下载)的运用
 [效果地址](https://sihai00.github.io/training-demo/download/)
 
 ## 功能列表与技术点
