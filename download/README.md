@@ -9,9 +9,9 @@
 3. 表格下载，导出可用Excel打开
 
 技术点
-1. 实现预览效果有两种生成base64的方法为FileReader和canvas
-   - FileReader可接收file对象，调用readAsDataURL即可生成base64
-   - canvas需接受图片的dom，调用toDataURL('image/png')生成base64
+1. 实现预览效果有两种生成base64的方法为**FileReader**和**canvas**
+   - FileReader：可接收file对象，调用readAsDataURL即可生成base64
+   - canvas：需接受图片的dom，调用toDataURL('image/png')生成base64
 2. 下载是运用h5新属性download实现`<a href="address" download="name.txt" ／>`，不考虑兼容性
 
 ## 图片上传与下载
