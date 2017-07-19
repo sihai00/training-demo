@@ -118,7 +118,7 @@ csvDownload.addEventListener('click', function(){
 })
 ```
 
-参考文章：
+参考文章：\
 [JS弹出下载对话框以及实现常见文件类型的下载](http://www.cnblogs.com/liuxianan/p/js-download.html)\
 [小tip:JS前端创建html或json文件并浏览器导出下载](http://www.zhangxinxu.com/wordpress/2017/07/js-text-string-download-as-html-json-file/)\
 [小tips:使用canvas在前端实现图片水印合成](http://www.zhangxinxu.com/wordpress/2017/05/canvas-picture-watermark-synthesis/)
