@@ -99,7 +99,7 @@ txtDownload.addEventListener('click', function(){
 ```
 
 ## 三：表格下载
-csv逗号分隔值文件格式，用逗号表示一个单元格，换行符表示一行，可用excel打开，例如`你好\n世界`
+csv逗号分隔值文件格式，用逗号表示一个单元格，换行符表示一行，可用excel打开，例如`你,好\n世,界`
 但有两个问题。
 1. 处理换行：encodeURIComponent
 2. 添加`\ufeff`BOM头
