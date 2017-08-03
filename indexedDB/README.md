@@ -1,5 +1,6 @@
 # indexedDB
 参考练习 --- 张鑫旭indexedDB前端本地存储数据库实例
+[效果地址](https://sihai00.github.io/training-demo/indexedDB/)
 
 ## 核心操作
 ```javascript
