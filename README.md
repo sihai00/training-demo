@@ -8,3 +8,4 @@ This repo is the demo about all technology in Front end
 | 2 | history | 两种方法实现ajax无法前进后退问题 | js、css、h5 history | [链接](./history/) |
 | 3 | datepicker | 简单纯js封装的datepicker插件 | js、css、html | [链接](./datepicker/) |
 | 4 | download | 资源下载 | js、css、h5 download | [链接](./download/) |
+| 5 | indexedDB | indexedDB前端本地存储数据库实例 | js、css、h5 indexedDB | [链接](./indexedDB/) |
